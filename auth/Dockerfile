@@ -1,5 +1,7 @@
 FROM node:15.7.0-buster
 RUN apt-get install gcc
+RUN ["nvm", "install", "v15.8.0"]
+RUN ["nvm", "use"]
 RUN npm install -g node-gyp
 
 WORKDIR /usr/src/app
